@@ -41,12 +41,27 @@ function setCurrentCategory(category) {
 function isCurrentCategory(category) {
             return $scope.currentCategory !== null && category.name === $scope.currentCategory.name;
         }
+        
+function isCurrentBookmark(bookmark) {
+            return $scope.currentBookmark !== null && bookmark.id === $scope.currentBookmark.id;
+        }
+        
+        function setCurrentBookmark(bookmark) {
+            $scope.currentBookmark = bookmark;
+        }
+        
 function shouldShowCreating() {
             return $scope.isCreating;
         }
+function shouldShowBookmark(){
+            return $scope.currentBookmark !== null;
+        }
         
 $scope.setCurrentCategory = setCurrentCategory;
+$scope.setCurrentBookmark = setCurrentBookmark;
 $scope.isCurrentCategory = isCurrentCategory;
+$scope.isCurrentBookmark = isCurrentBookmark;
 $scope.shouldShowCreating = shouldShowCreating;
+$scope.shouldShowBookmark = shouldShowBookmark;
 
  })
