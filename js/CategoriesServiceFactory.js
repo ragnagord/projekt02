@@ -21,7 +21,7 @@ angular.module("myApp.factoryCategoriesService", ["firebase"])
           }
         } 
     };
-
+    
 return{
         getCategories: getCategories,
         addCategory: addCategory,
